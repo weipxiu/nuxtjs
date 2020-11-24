@@ -5,7 +5,8 @@ export default function (context) {
   console.log(context.route.path )
   if(!/Chrome/.test(context.userAgent)){
     if(context.route.path !='/'){
-      context.redirect({path:'/', name: 'index', query: { message: '当前不是Chrome浏览器，只允许访问首页' } })
+      context.redirect({path:'/', name: 'index',
+      query: { message: '当前不是Chrome浏览器，只允许访问首页' } })
     }
   }
 }

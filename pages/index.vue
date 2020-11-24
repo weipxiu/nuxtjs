@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <div>
-        <nuxt-link to="/home">home</nuxt-link>
+        <nuxt-link to="/home">HOME</nuxt-link>
         <nuxt-link to="/study">动态路由</nuxt-link>
         <nuxt-link to="/users">嵌套路由</nuxt-link>
       </div>
