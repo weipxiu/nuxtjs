@@ -1,17 +1,20 @@
 <template>
   <div class="container">
     <div>
-      <div>
-        <nuxt-link to="/home">home</nuxt-link>
-        <nuxt-link to="/study">动态路由</nuxt-link>
-        <nuxt-link to="/users">嵌套路由</nuxt-link>
-      </div>
+      <h2>动态路由详情页</h2>
+      你想学习的课程id是：{{$route.params}}
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: ()=>{
+    return {
+      datalist:[]
+    }
+  }
+}
 </script>
 
 <style>

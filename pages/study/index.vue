@@ -1,17 +1,38 @@
 <template>
   <div class="container">
     <div>
-      <div>
-        <nuxt-link to="/home">home</nuxt-link>
-        <nuxt-link to="/study">动态路由</nuxt-link>
-        <nuxt-link to="/users">嵌套路由</nuxt-link>
-      </div>
+      <h2>动态路由</h2>
+      <ul>
+        <li v-for="(item,index) in datalist" :key="index"><nuxt-link :to="'/detail/'+item.id">{{item.name}}</nuxt-link></li>
+        <!-- 动态路由：新建detail目录，里面新建_id.vue模板，这个.vue文件名和上面:to传的参数名id一致即可 -->
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: ()=>{
+    return {
+      datalist:[{
+        id:1,
+        name:'html'
+      },
+      {
+        id:2,
+        name:'css'
+      },
+      {
+        id:3,
+        name:'javascript'
+      },
+      {
+        id:4,
+        name:'nuxtjs'
+      }]
+    }
+  }
+}
 </script>
 
 <style>

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div>
-      <div>
-        <nuxt-link to="/home">home</nuxt-link>
-        <nuxt-link to="/study">动态路由</nuxt-link>
-        <nuxt-link to="/users">嵌套路由</nuxt-link>
-      </div>
+      <h2>nuxtjs路由嵌套</h2>
+      <!-- 嵌套路由：新建一个page目录例如users，目录下就是嵌套的各个子页面，在users该目录同级新建一个users.vue文件，这相当于是进入users嵌套路由的入口文件 -->
+      <nuxt-link to="/users/">首页</nuxt-link>
+      <nuxt-link to="/users/about">详情页</nuxt-link>
+      <nuxt />
     </div>
   </div>
 </template>
